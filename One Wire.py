@@ -25,6 +25,7 @@
   Modified by Robohelo to fit the Jetson nano
 
 """
+__repo__ = "https://github.com/Robohelo/DS2482-python-jetson-nano"
 
 from smbus2 import SMBus, i2c_msg
 import time
