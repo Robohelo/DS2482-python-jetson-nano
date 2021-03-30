@@ -27,7 +27,7 @@
 """
 __repo__ = "https://github.com/Robohelo/DS2482-python-jetson-nano"
 
-from smbus2 import SMBus, i2c_msg
+from smbus2 import SMBus
 import time
 from ctypes import c_uint8
 
