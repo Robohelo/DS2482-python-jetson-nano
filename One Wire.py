@@ -34,9 +34,9 @@ from ctypes import c_uint8
 
 class DS2482():
 
-    def __init__(self, addr):
+    def __init__(self, bus, addr):
         self.addr = 0x18 | addr
-        self.bus = SMBus(0)
+        self.bus = bus
         self.PTR_STATUS = 0xf0
         self.PTR_READ = 0xe1
         self.PTR_CONFIG = 0xc3
@@ -205,7 +205,7 @@ class OneWire(DS2482):
 
     def __init__(self, bus):
         # Initalisieren über Eltern-Klasse
-        super().__init__(bus, addr=0)
+        super().__init__(bus, addr = 0)
 
     def deinit(self):
         """
