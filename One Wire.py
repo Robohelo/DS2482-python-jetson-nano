@@ -231,13 +231,25 @@ class OneWire(DS2482):
         """
         return super().wireWriteBit()
 
-    def search():
+    def read_byte(self):
+        """
+        Read in a byte
+        """
+        return super().wireReadByte()
+
+    def write_byte(self, value):
+        """
+        Write out a byte based on value.
+        """
+        return super().wireWriteByte()
+
+    def search(self, newAddr):
         """
         Search ROM
         """
-        return super().wireSearch()
+        return super().wireSearch(newAddr)
 
-    def reset_search():
+    def reset_search(self):
         """
         Resets ROM search
         """
