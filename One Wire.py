@@ -241,7 +241,7 @@ class OneWire(DS2482):
         """
         Write out a byte based on value.
         """
-        return super().wireWriteByte()
+        return super().wireWriteByte(value)
 
     def search(self, newAddr):
         """
